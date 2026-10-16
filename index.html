@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oMzee Lifestyle | Butchery, Shisanyama & Lounge in Esikhawini</title>
+<meta name="description" content="oMzee Lifestyle in Esikhawini, Richards Bay: fresh butchery, flame-grilled shisanyama platters, drinks and weekend nights. Call 072 573 2100.">
+<meta property="og:title" content="oMzee Lifestyle">
+<meta property="og:description" content="Butchery, shisanyama and lounge in Esikhawini, Richards Bay.">
+<meta property="og:image" content="images/logo.jpg">
+<link rel="icon" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#262928; --ink2:#1b1d1c; --paper:#fff8ea;
+  --gold:#f2b705; --flame:#e8382b; --magenta:#d62f8f; --violet:#6a35d9; --teal:#14b8a6;
+  --text:#f4efe4; --muted:#bdb8ab;
+  --display:'Bricolage Grotesque',Impact,sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);background:var(--ink);color:var(--text);line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;margin-bottom:.4em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(27,29,28,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--gold)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.15rem}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:center 45%;border:2px solid var(--gold)}
+.links{display:flex;gap:22px;align-items:center;list-style:none;padding:0}
+.links a{text-decoration:none;font-weight:500}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--gold);color:#1b1d1c;font-weight:700;text-decoration:none;border:2px solid var(--gold);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--text)}
+.links .btn{padding:8px 18px}
+@media(max-width:760px){.links li:not(:last-child){display:none}}
+
+/* hero */
+.hero{padding:0;position:relative;min-height:88vh;display:grid;align-items:end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(27,29,28,.25),rgba(27,29,28,.95)),linear-gradient(110deg,rgba(106,53,217,.55),rgba(214,47,143,.25) 55%,transparent)}
+.hero .wrap{position:relative;z-index:2;padding-top:120px;padding-bottom:64px}
+.hero h1{font-size:clamp(3.2rem,12vw,8rem);font-weight:800;max-width:11ch}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:34em;font-size:1.2rem;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.55);padding:6px 14px;border-radius:999px;font-weight:500;margin-bottom:18px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.status.open .dot{background:var(--teal);box-shadow:0 0 0 4px rgba(20,184,166,.3)}
+
+/* three worlds */
+.worlds{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.world{position:relative;min-height:520px;display:flex;align-items:flex-end;padding:32px;overflow:hidden;text-decoration:none}
+.world img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.world:hover img{transform:scale(1.05)}
+.world::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--c))}
+.world div{position:relative;z-index:1}
+.world h3{font-size:2.3rem;font-weight:800;margin-bottom:8px}
+.world p{max-width:24em}
+.w1{--c:rgba(180,28,20,.95)} .w2{--c:rgba(150,90,0,.95)} .w3{--c:rgba(90,40,190,.95)}
+@media(max-width:860px){.worlds{grid-template-columns:1fr}.world{min-height:380px}}
+
+/* butchery */
+.butch{background:var(--paper);color:#26211a}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split img{border-radius:20px;width:100%}
+.butch h2{color:var(--flame)}
+.butch ul{list-style:none;padding:0;margin:20px 0 28px;display:grid;gap:10px}
+.butch li{padding-left:30px;position:relative}
+.butch li::before{content:"";position:absolute;left:0;top:.5em;width:16px;height:16px;border-radius:50%;background:var(--flame);box-shadow:5px 5px 0 var(--gold)}
+.stack{position:relative}
+.stack img:nth-child(2){position:absolute;width:48%;right:-12px;bottom:-30px;border:6px solid var(--paper);transform:rotate(3deg)}
+.btn.dark{background:#26211a;border-color:#26211a;color:var(--paper)}
+@media(max-width:860px){.split{grid-template-columns:1fr}.stack{margin-bottom:30px}}
+
+/* shisanyama */
+.shisa{background:linear-gradient(135deg,#8a1d12,#e8382b 60%,#f2b705);color:#fff}
+.shisa .split img{box-shadow:12px 12px 0 rgba(0,0,0,.3)}
+.shisa p{margin-bottom:14px;font-size:1.1rem}
+.rev .split{direction:rtl}.rev .split>*{direction:ltr}
+
+/* drinks */
+.drinks{background:var(--ink2)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 28px}
+.chips span{padding:8px 18px;border-radius:999px;font-weight:700;color:#1b1d1c}
+.chips span:nth-child(5n+1){background:var(--gold)}.chips span:nth-child(5n+2){background:var(--teal)}
+.chips span:nth-child(5n+3){background:var(--magenta);color:#fff}.chips span:nth-child(5n+4){background:#ff8a3d}
+.chips span:nth-child(5n+5){background:#a98bff}
+
+/* nights */
+.nights{background:linear-gradient(160deg,#2b1466,#6a35d9 55%,#d62f8f);}
+.nights .head{max-width:640px;margin-bottom:36px}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px}
+.mosaic img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.mosaic .big{grid-column:span 2;grid-row:span 2}
+.mosaic .wide{grid-column:span 2}
+@media(max-width:760px){.mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+
+/* owner */
+.owner .split{grid-template-columns:5fr 6fr}
+.owner img{border-radius:20px;border:4px solid var(--gold);aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.owner blockquote{font-family:var(--display);font-size:1.5rem;line-height:1.25;border-left:6px solid var(--magenta);padding-left:20px;margin:22px 0}
+@media(max-width:860px){.owner .split{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--gold);color:#1b1d1c}
+.visit h2{color:#1b1d1c}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+table{width:100%;border-collapse:collapse;font-size:1.05rem}
+td{padding:9px 0;border-bottom:1.5px solid rgba(27,29,28,.25)}
+td:last-child{text-align:right;font-weight:700}
+tr.today td{color:var(--flame);font-weight:800}
+.visit address{font-style:normal;font-size:1.15rem;margin-bottom:12px}
+.big-phone{font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,3rem);display:block;text-decoration:none;margin:6px 0 18px}
+.visit .btn{background:#1b1d1c;border-color:#1b1d1c;color:var(--gold)}
+.visit .btn.alt{background:transparent;color:#1b1d1c}
+.rating{margin-top:20px;font-weight:500}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+
+footer{background:var(--ink2);padding:36px 0;text-align:center;color:var(--muted);font-size:.95rem}
+footer img{width:120px;margin:0 auto 12px;border-radius:50%}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="#top"><img src="images/logo.jpg" alt="oMzee Lifestyle logo">oMzee Lifestyle</a>
+    <ul class="links">
+      <li><a href="#butchery">Butchery</a></li>
+      <li><a href="#shisanyama">Shisanyama</a></li>
+      <li><a href="#drinks">Drinks</a></li>
+      <li><a href="#nights">Nights</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn" href="tel:0725732100">Call us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <img src="images/night.jpg" alt="Crowd dancing under stage lights at an oMzee Lifestyle event">
+  <div class="wrap">
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">Esikhawini, Richards Bay</span></div>
+    <h1>Meat. Music. <span>Mzee.</span></h1>
+    <p>Fresh cuts from the butchery, platters off the fire and cold drinks on the lounge. Esikhawini's home for good food and better weekends.</p>
+    <div class="cta">
+      <a class="btn" href="tel:0725732100">Call 072 573 2100</a>
+      <a class="btn alt" href="#visit">Hours and directions</a>
+    </div>
+  </div>
+</section>
+
+<div class="worlds">
+  <a class="world w1" href="#butchery"><img src="images/shop.jpg" alt="oMzee Butchery and Shisanyama storefront" loading="lazy"><div><h3>Butchery</h3><p>Fresh meat for your own braai, ready to take home.</p></div></a>
+  <a class="world w2" href="#shisanyama"><img src="images/platter1.jpg" alt="Wooden board of grilled meat and boerewors" loading="lazy"><div><h3>Shisanyama</h3><p>Grilled to order and served on the board.</p></div></a>
+  <a class="world w3" href="#drinks"><img src="images/lounge.jpg" alt="Friends relaxing in the lounge with drinks" loading="lazy"><div><h3>Lounge</h3><p>Ice buckets, good company, loud weekends.</p></div></a>
+</div>
+
+<section class="butch" id="butchery">
+  <div class="wrap split">
+    <div class="stack">
+      <img src="images/shop.jpg" alt="oMzee Butchery shop front on Mdoni Road" loading="lazy">
+      <img src="images/platter2.jpg" alt="Grilled meat platter" loading="lazy">
+    </div>
+    <div>
+      <h2>The butchery</h2>
+      <p>Walk in, pick your cuts and braai at home. The oMzee butchery stocks the meat that the shisanyama is known for, with the same care from counter to coals.</p>
+      <ul>
+        <li>Cuts for the home braai</li>
+        <li>Boerewors and sausage</li>
+        <li>Open every day, from 8 am</li>
+      </ul>
+      <a class="btn dark" href="tel:0725732100">Ask about today's stock</a>
+    </div>
+  </div>
+</section>
+
+<section class="shisa rev" id="shisanyama">
+  <div class="wrap split">
+    <div>
+      <h2>Shisanyama, off the fire</h2>
+      <p>Pick your meat, we grill it, and it lands on a wooden board with a fresh tomato and onion salad on the side. Share it with the table.</p>
+      <p>Sit under the braai shelter or out on the paved patio, with stone tables and benches in the sun.</p>
+      <a class="btn" style="margin-top:10px" href="#visit">Plan your visit</a>
+    </div>
+    <img src="images/platter1.jpg" alt="Platter of grilled ribs, steak and a coil of boerewors with salad" loading="lazy">
+  </div>
+</section>
+
+<section class="drinks" id="drinks">
+  <div class="wrap split">
+    <img src="images/drinks.jpg" alt="Ice bucket with whiskey, energy drink and cold cans" loading="lazy">
+    <div>
+      <h2>Drinks for the table</h2>
+      <p>Order a bucket, grab some mixers and settle in. The restaurant and lounge serve a range of drinks to go with the food and the music.</p>
+      <div class="chips"><span>Whiskey</span><span>Gin</span><span>Brandy</span><span>Beer and cider</span><span>Mixers and energy drinks</span><span>Soft drinks</span></div>
+      <a class="btn" href="tel:0725732100">Ask what's on the menu</a>
+    </div>
+  </div>
+</section>
+
+<section class="nights" id="nights">
+  <div class="wrap">
+    <div class="head">
+      <h2>When the sun goes down</h2>
+      <p>DJs, sound, lights and a full yard. Weekend events at oMzee bring the community together.</p>
+    </div>
+    <div class="mosaic">
+      <img class="big" src="images/crowd.jpg" alt="Guests smiling at an oMzee Lifestyle event" loading="lazy">
+      <img src="images/dj.jpg" alt="DJ at the decks" loading="lazy">
+      <img src="images/night.jpg" alt="Night stage with lights and crowd" loading="lazy">
+      <img class="wide" src="images/friends.jpg" alt="Group of friends laughing with drinks" loading="lazy">
+      <img src="images/braai.jpg" alt="Braai shelter with brick fireplace" loading="lazy">
+      <img src="images/patio.jpg" alt="Patio with stone tables and benches" loading="lazy">
+      <img class="wide" src="images/yard.jpg" alt="Covered seating area and yard" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="owner" id="owner">
+  <div class="wrap split">
+    <img src="images/owner.jpg" alt="Mr Mbuso with a microphone, addressing the crowd" loading="lazy">
+    <div>
+      <h2>Meet Mr Mbuso</h2>
+      <p>The owner behind oMzee Lifestyle is often the loudest voice in the yard: on the mic, with the crowd, making sure everybody has a good time.</p>
+      <blockquote>A butchery that feeds the neighbourhood. A lounge that brings it together.</blockquote>
+      <p>Come say hello on your next visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap cols">
+    <div>
+      <h2>Come through</h2>
+      <address>Mdoni Rd, Esikhawini H,<br>Richards Bay, 3887</address>
+      <a class="big-phone" href="tel:0725732100">072 573 2100</a>
+      <div class="cta">
+        <a class="btn" href="tel:0725732100">Call now</a>
+        <a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=oMzee+Butchery+Mdoni+Rd+Esikhawini+Richards+Bay">Get directions</a>
+      </div>
+      <p class="rating">Rated 4.3 out of 5 on Google</p>
+    </div>
+    <div>
+      <table aria-label="Opening hours" id="hours">
+        <tr data-d="1"><td>Monday</td><td>8 am – 8 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8 am – 8 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8 am – 8 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8 am – 8 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8 am – 11 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8 am – 11 pm</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>8 am – 10 pm</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="images/logo.jpg" alt="oMzee Lifestyle crest">
+  <p>© <span id="yr">2026</span> oMzee Lifestyle · Mdoni Rd, Esikhawini, Richards Bay</p>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var close={0:22,1:20,2:20,3:20,4:20,5:23,6:23};
+  var parts=new Intl.DateTimeFormat('en-US',{timeZone:'Africa/Johannesburg',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+  var wd=parts.find(function(p){return p.type==='weekday'}).value;
+  var h=parseInt(parts.find(function(p){return p.type==='hour'}).value,10)%24;
+  var d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[wd];
+  var open=h>=8&&h<close[d];
+  var s=document.getElementById('status');
+  if(open){s.classList.add('open');document.getElementById('statusText').textContent='Open now, until '+(close[d]>12?close[d]-12:close[d])+' pm';}
+  else{document.getElementById('statusText').textContent='Closed now, opens at 8 am';}
+  var row=document.querySelector('#hours tr[data-d="'+d+'"]');if(row)row.className='today';
+})();
+</script>
+</body>
+</html>
